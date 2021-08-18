@@ -1,0 +1,56 @@
+.intro {
+  font-family: @Oswald;
+  text-align: center;
+}
+
+.intro--main {
+  color: @basic-white;
+}
+
+.intro__main-container {
+  background-color: @green-opacity;
+  position: relative;
+}
+
+.intro__main-container::before {
+  content: "";
+  background: url("../img/index-background.jpg") no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.intro__wrapper {
+  padding: 0 20px;
+  padding-top: 27px;
+  border-top: 1px solid @lightgray;
+  border-bottom: 1px solid @lightgray;
+}
+
+.intro__header,
+.intro__slogan {
+  .clear-text;
+}
+
+.intro__header {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.intro__slogan {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-bottom: 29px;
+}
+
+.intro__button {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 20px;
+}

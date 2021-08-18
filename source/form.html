@@ -2,6 +2,7 @@
 <html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -16,17 +17,17 @@
             </button>
             <ul class="main-nav__list site-nav">
               <li class="site-nav__list-item">
-                <a href="index.html">
+                <a class="site-nav__link" href="#">
                   Главная
                 </a>
               </li>
               <li class="site-nav__list-item">
-                <a href="catalog.html">
+                <a class="site-nav__link" href="catalog.html">
                   Каталог продукции
                 </a>
               </li>
               <li class="site-nav__list-item">
-                <a href="">
+                <a class="site-nav__link" href="form.html">
                   Подбор программы
                 </a>
               </li>
@@ -35,42 +36,42 @@
         </div>
       </header>
       <main class="page-main">
-        <section class="intro intro--not-main">
-          <h1 class="intro__header">Функциональное питание для котов</h1>
+        <section class="intro intro__wrapper">
+          <h1 class="intro__header">Подбор программы</h1>
           <p class="intro__slogan">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </section>
         <form class="application" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="application__user-info">
-            <legend class="application__legend application__legend--hidden">
+            <legend class="visually-hidden">
               Данные вашего питомца
             </legend>
             <label class="application__input-text input-text">
               <span>Имя:*</span>
-              <input type="text" name="name" placeholder="Барсик" required>
+              <input class="input-text__input" type="text" name="name" placeholder="Барсик" required>
             </label>
             <label class="application__input-text input-text">
               <span>Вес (кг):*</span>
-              <input type="text" name="surname" placeholder="7" required>
+              <input class="input-text__input" type="text" name="surname" placeholder="7" required>
             </label>
             <label class="application__input-text input-text">
               <span>Возраст (лет):</span>
-              <input type="text" name="middle-name" placeholder="7">
+              <input class="input-text__input" type="text" name="middle-name" placeholder="7">
             </label>
           </fieldset>
 
           <fieldset class="application__target">
-            <legend class="application__legend application__legend--hidden">
+            <legend class="visually-hidden">
                 Ваша цель:
             </legend>
-            <label class="application__choice choice">
+            <label class="application__choice choice choice--radio">
               <input class="visually-hidden" type="radio" name="target" value="slim" checked>
               Похудение
             </label>
-            <label class="application__choice choice">
+            <label class="application__choice choice choice--radio">
               <input class="visually-hidden" type="radio" name="target" value="gain">
               Набор массы
             </label>
-            <label class="application__choice choice">
+            <label class="application__choice choice choice--radio">
               <input class="visually-hidden" type="radio" name="target" value="advice">
               Не знаю (нужен ваш совет)
             </label>
@@ -82,11 +83,11 @@
             </legend>
             <label class="application__input-text input-text input-text--email">
               E-mail:*
-              <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="input-text__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="application__input-text input-text input-text--tel">
               Телефон:*
-              <input type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              <input class="input-text__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </label>
           </fieldset>
 
@@ -94,48 +95,42 @@
             <legend class="application__legend">
               Комментарий
             </legend>
-            <textarea class="application__textarea field-text" wrap="soft" name="attraction" placeholder="Расскажите обо всех повадках кота" aria-label="Комментарий"></textarea>
+            <textarea class="application__textarea input-text__input input-text__input--textarea" wrap="soft" name="attraction" placeholder="Расскажите обо всех повадках кота" aria-label="Комментарий"></textarea>
           </fieldset>
 
           <fieldset class="application__extra">
             <legend class="application__legend">
               Дополнительно
             </legend>
-            <label class="application__choice application__choice--checkbox choice choice--checkbox">
+            <label class="application__choice choice choice--checkbox">
               <input class="visually-hidden" type="checkbox" name="extra" value="sweetener" checked>
               Сахарозаменитель
             </label>
-            <label class="application__choice application__choice--checkbox choice choice--checkbox">
+            <label class="application__choice choice choice--checkbox">
               <input class="visually-hidden" type="checkbox" name="extra" value="water">
               Питьевая вода
             </label>
-            <label class="application__choice application__choice--checkbox choice choice--checkbox">
+            <label class="application__choice choice choice--checkbox">
               <input class="visually-hidden" type="checkbox" name="extra" value="milk">
               Молоко
             </label>
-            <label class="application__choice application__choice--checkbox choice choice--checkbox">
+            <label class="application__choice choice choice--checkbox">
               <input class="visually-hidden" type="checkbox" name="extra" value="vitamins">
               Витамины
             </label>
           </fieldset>
-
           <button type="submit" class="application__button button">Отправить заявку</button>
           <p class="application__required">* — Обязательные поля</p>
         </form>
         <section class="contacts">
           <h2 class="contacts__header">Приглашаем к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</address>
+          <address class="contacts__address basic-text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</address>
           <img class="contacts__map" src="img/location.png" width="320" height="362" alt="Адрес магазина - ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
         </section>
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <p class="page-footer__title">
-            <span>
-              Cat
-            </span>
-            energy
-          </p>
+          <img class="page-footer__logo" src="./img/footer-logo.svg" width="128" height="24" aria-label="Логотип Кэт энерджи">
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
