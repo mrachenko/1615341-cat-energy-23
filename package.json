@@ -13,12 +13,14 @@
     "gulp-sourcemaps": "3.0.0",
     "postcss": "8.2.8",
     "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.10"
+    "stylelint-config-htmlacademy": "0.1.10",
+    "w3c-html-validator": "^0.7.9"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-    "test": "npm run editorconfig && npm run stylelint",
+    "validate-html": "w3c-html-validator source",
+    "test": "npm run editorconfig && npm run stylelint && npm run validate-html",
     "build": "gulp styles",
     "start": "gulp"
   },
@@ -36,6 +38,6 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "^12 || ^14"
+    "node": "14"
   }
 }
