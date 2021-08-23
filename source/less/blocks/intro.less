@@ -8,26 +8,32 @@
 }
 
 .intro__main-container {
-  background-color: @green-opacity;
   position: relative;
-}
 
-.intro__main-container::before {
-  content: "";
-  background: url("../img/index-background.jpg") no-repeat;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  &::before {
+    content: "";
+    background-image: linear-gradient(
+      to bottom,
+      @green-opacity 0,
+      @green-opacity 60%,
+      @basic-white 60%,
+      @basic-white 100%
+      ),
+      url("../img/index-background.jpg");
+    background-repeat: no-repeat;
+    background-size: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 }
 
 .intro__wrapper {
-  padding: 0 20px;
   padding-top: 27px;
   border-top: 1px solid @lightgray;
-  border-bottom: 1px solid @lightgray;
 }
 
 .intro__wrapper--form {
@@ -56,5 +62,5 @@
 .intro__button {
   font-size: 14px;
   line-height: 18px;
-  margin: 0 20px;
+  margin: 0 auto;
 }

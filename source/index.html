@@ -2,6 +2,7 @@
 <html lang="ru" class="page">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <title>HTML Academy: Кэт энерджи</title>
@@ -39,15 +40,16 @@
       <main class="page-main">
         <section class="intro intro--main">
           <div class="intro__main-container">
-            <div class="intro__wrapper">
+            <div class="intro__wrapper center-wrapper">
               <h1 class="intro__header">Функциональное питание для котов</h1>
               <p class="intro__slogan">Занялся собой? Займись котом!</p>
               <img class="intro__image" src="img/index-can-mobile.png" height="270" width="280" alt="Банка функционального питания">
             </div>
           </div>
-          <a class="intro__button button" href="form.html">Подобрать программу</a>
+          <div class="center-wrapper">
+            <a class="intro__button button" href="form.html">Подобрать программу</a>
         </section>
-        <section class="food-series">
+        <section class="food-series center-wrapper">
           <h2 class="visually-hidden">Серии еды для котов</h2>
             <ul class="food-series__list">
               <li class="food-series__list-item food-type food-type--slim">
@@ -62,7 +64,7 @@
               </li>
             </ul>
         </section>
-        <section class="food-schema">
+        <section class="food-schema center-wrapper">
           <h2 class="food-schema__header">Как это работает</h2>
             <ul class="food-schema__list basic-text">
               <li class="food-schema__list-item">
@@ -80,7 +82,7 @@
             </ul>
         </section>
         <section class="example">
-          <div class="example__wrapper">
+          <div class="example__wrapper center-wrapper">
             <h2 class="example__header">Живой пример</h2>
             <p class="example__description basic-text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
             <ul class="example__achievements achievements-list">
@@ -106,15 +108,14 @@
           </div>
         </section>
         <section class="contacts contacts--main">
-          <div class="contacts__text-wrapper">
+          <div class="contacts__text-wrapper center-wrapper">
             <h2 class="contacts__header">Приглашаем к сотрудничеству дилеров!</h2>
             <address class="contacts__address basic-text">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</address>
           </div>
           <img class="contacts__map" src="img/location.png" width="320" height="362" alt="Адрес магазина - ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
         </section>
       </main>
-      <footer class="page-footer">
-        <div class="page-footer__wrapper">
+      <footer class="page-footer center-wrapper">
           <img class="page-footer__logo" src="./img/footer-logo.svg" width="128" height="24" aria-label="Логотип Кэт энерджи">
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -132,14 +133,12 @@
               </li>
             </ul>
           </div>
-
           <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
               HTML Academy
               <img src="img/htmlacademy.svg" alt="HTML Academy">
             </a>
           </div>
-        </div>
       </footer>
     </div>
   </body>
