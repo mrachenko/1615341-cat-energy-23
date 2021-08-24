@@ -1,43 +1,38 @@
 .intro {
   font-family: @Oswald;
   text-align: center;
-}
-
-.intro--main {
-  color: @basic-white;
-}
-
-.intro__main-container {
   position: relative;
+  padding-top: 27px;
+  margin-bottom: 22px;
+
+  &--main {
+    color: @basic-white;
+  }
 
   &::before {
     content: "";
     background-image: linear-gradient(
       to bottom,
       @green-opacity 0,
-      @green-opacity 60%,
-      @basic-white 60%,
+      @green-opacity 63%,
+      @basic-white 63%,
       @basic-white 100%
       ),
       url("../img/index-background.jpg");
     background-repeat: no-repeat;
-    background-size: center;
+    background-size: contain;
+    min-width: 320px;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: -1;
+
+    @media (min-width: @main-intro-width) and (max-width: @mobile-width-only) {
+      background-size: cover;
+    }
   }
-}
-
-.intro__wrapper {
-  padding-top: 27px;
-  border-top: 1px solid @lightgray;
-}
-
-.intro__wrapper--form {
-  border-bottom: 0;
 }
 
 .intro__header,

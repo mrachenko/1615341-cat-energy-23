@@ -2,19 +2,12 @@
   .clear-list;
   background-color: @basic-gray;
   padding: 18px;
+  padding-bottom: 3px;
 }
 
 .food-type__title,
 .food-type__description {
   .clear-text;
-}
-
-.food-type__catalog {
-  .clear-link;
-  font-family: @Oswald;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 16px;
 }
 
 .food-type__title {
@@ -23,4 +16,24 @@
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
+  padding-left: 72px;
+  margin-top: 12px;
+  margin-bottom: 29px;
+}
+
+.food-type__description {
+  padding-left: 2px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @lightgray;
+}
+
+.food-type__catalog {
+  .clear-link;
+  display: block;
+  font-family: @Oswald;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
