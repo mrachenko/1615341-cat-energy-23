@@ -1,0 +1,44 @@
+.achievements-list {
+  .clear-list;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.achievements-list__item-header,
+.achievements-list__item-description {
+  .clear-text;
+}
+
+.achievements-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid @special-gray;
+  border-radius: 3px;
+  padding: 14px 10px 18px;
+  width: 100%;
+  position: relative;
+  max-width: 124px;
+}
+
+.achievements-list__item-header {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @Oswald;
+  text-transform: uppercase;
+}
+
+.achievements-list__item-description {
+  font-size: 12px;
+  line-height: 12px;
+  padding: 0 5px;
+  text-transform: lowercase;
+  color: @special-dark-gray;
+  position: absolute;
+  background-color: @background-gray;
+  top: calc(100% - 0.8em);
+  width: 70%;
+}
