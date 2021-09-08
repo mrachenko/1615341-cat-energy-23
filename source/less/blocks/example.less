@@ -5,34 +5,30 @@
 }
 
 .example {
+  padding-top: 27px;
+  padding-bottom: 27px;
   background-color: @background-gray;
 
   @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 33px;
     border-top: 1px solid @special-gray-4;
     background: linear-gradient(to bottom, @basic-white 58%, @background-gray 58%);
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(to bottom, @basic-white 17%, @background-gray 17%);
+    background: linear-gradient(to bottom, @basic-white 30%, @background-gray 30%);
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 .example__wrapper {
-  padding-top: 27px;
-  padding-bottom: 27px;
-
-  @media (min-width: @tablet-width) {
-    padding-top: 43px;
-    padding-bottom: 33px;
-  }
-
   @media (min-width: @desktop-width) {
-    max-width: @desktop-width;
+    max-width: calc(@desktop-width + 60px);
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 0;
-    padding-bottom: 0;
   }
 }
 
@@ -50,6 +46,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 65px;
     margin-bottom: 146px;
   }
 }
