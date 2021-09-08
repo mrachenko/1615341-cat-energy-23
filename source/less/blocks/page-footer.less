@@ -1,5 +1,8 @@
 .page-footer {
   background-color: @basic-gray;
+}
+
+.page-footer__wrapper {
   padding-top: 22px;
   padding-bottom: 22px;
 
@@ -8,6 +11,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
   }
 }
 
