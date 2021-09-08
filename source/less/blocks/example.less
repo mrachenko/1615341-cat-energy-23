@@ -6,11 +6,32 @@
 
 .example {
   background-color: @background-gray;
+
+  @media (min-width: @tablet-width) {
+    border-top: 1px solid @special-gray-4;
+    background: linear-gradient(to bottom, @basic-white 58%, @background-gray 58%);
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(to bottom, @basic-white 17%, @background-gray 17%);
+  }
 }
 
 .example__wrapper {
   padding-top: 27px;
   padding-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .example__header {
@@ -19,10 +40,44 @@
   font-family: @Oswald;
   font-weight: 400;
   margin-bottom: 33px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 436px;
+  }
+}
+
+.example__list-container {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 59px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 436px;
+  }
 }
 
 .example__count {
@@ -32,19 +87,62 @@
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 42px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    text-align: right;
+    max-width: 174px;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    text-align: left;
+    max-width: initial;
+  }
+}
+
+.example__carousel {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 64px;
+  }
 }
 
 .example__photoplace {
+  .clear-list;
   width: 311px;
   height: 240px;
+  margin: 0 auto;
   margin-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 620px;
+  }
 }
 
 .example__photo {
   display: block;
   margin: 0 auto;
+  height: 100%;
+  width: auto;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .example__photo--hidden {
   display: none;
+}
+
+.example__slider {
+  width: 228px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -60px;
+  }
 }

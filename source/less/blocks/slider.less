@@ -1,6 +1,4 @@
 .slider {
-  width: 228px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -15,6 +13,11 @@
   font-family: @Oswald;
   text-transform: uppercase;
   cursor: pointer;
+  user-select: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .slider__scale {
@@ -25,6 +28,14 @@
   box-sizing: border-box;
   border-radius: 6px;
   cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    min-width: 428px;
+    margin: 0 10px;
+    height: 6px;
+    background-color: @slider-gray;
+    border: 0;
+  }
 }
 
 .slider__toggle {
@@ -35,11 +46,42 @@
   background-color: @basic-green;
   border-radius: 6px;
 
-  &--from {
-    left: 5px;
+  @media (max-width: @mobile-width-only) {
+    &--from {
+      left: 5px;
+    }
+
+    &--to {
+      left: 43px;
+    }
   }
 
-  &--to {
-    left: 43px;
+  @media (min-width: @tablet-width) {
+    top: -14px;
+    height: 34px;
+    width: 34px;
+    background-color: @basic-white;
+    border-radius: 50%;
+    border: 1px solid @basic-gray;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.16));
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      border-radius: 50%;
+      width: 8px;
+      height: 8px;
+      background-color: @basic-green;
+    }
+
+    &--from {
+      left: 0;
+    }
+
+    &--to {
+      left: 395px;
+    }
   }
 }

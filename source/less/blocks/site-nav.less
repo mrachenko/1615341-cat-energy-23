@@ -9,4 +9,30 @@
   padding: 23px 20px;
   text-align: center;
   border-top: 1px solid @lightgray;
+
+  @media (min-width: @tablet-width) {
+    border-top: none;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: @basic-white;
+  }
+}
+
+.site-nav__link--active {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @basic-green;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-color: @basic-white;
+  }
 }
