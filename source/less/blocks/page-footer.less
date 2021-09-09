@@ -1,13 +1,32 @@
 .page-footer {
   background-color: @basic-gray;
+}
+
+.page-footer__wrapper {
   padding-top: 22px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .page-footer__logo {
   display: block;
   margin: 17px auto;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 
@@ -16,4 +35,10 @@
   border-top: 1px solid @lightgray;
   border-bottom: 1px solid @lightgray;
   margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    border-bottom: 0;
+    border-top: 0;
+  }
 }

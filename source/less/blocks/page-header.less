@@ -1,25 +1,32 @@
-.page-header__wrapper {
+.page-header {
   padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid @lightgray;
-  min-width: 320px;
 
   &--main {
     border-bottom: none;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 36px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 53px 110px;
+    padding-bottom: 29px;
+    max-width: @desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .page-header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 38px;
+  display: block;
   padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 17px;
-}
 
-.page-header__logo-img {
-  position: absolute;
-  top: 10px;
-  left: 20px;
+  @media (min-width: @tablet-width) {
+    padding-left: 18px;
+  }
 }

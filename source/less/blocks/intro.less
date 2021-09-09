@@ -5,10 +5,6 @@
   padding-top: 27px;
   margin-bottom: 22px;
 
-  &--main {
-    color: @basic-white;
-  }
-
   &::before {
     content: "";
     background-image: linear-gradient(
@@ -20,8 +16,7 @@
       ),
       url("../img/index-background.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    min-width: 320px;
+    background-size: 100%;
     position: absolute;
     left: 0;
     top: 0;
@@ -29,9 +24,53 @@
     bottom: 0;
     z-index: -1;
 
-    @media (min-width: @main-intro-width) and (max-width: @mobile-width-only) {
-      background-size: cover;
+    @media (min-width: @tablet-width) {
+      content: none;
     }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      background-image: linear-gradient(
+      to bottom,
+      @green-opacity 0,
+      @green-opacity 63%,
+      @basic-white 63%,
+      @basic-white 100%
+      ),
+        url("../img/index-background-desktop.jpg");
+      background-size: contain;
+      min-height: 694px;
+      left: 50%;
+      top: -145px;
+    }
+  }
+
+  &--main {
+    color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      color: @basic-black;
+      margin-bottom: -54px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: -350px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.intro__wrapper {
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
   }
 }
 
@@ -44,7 +83,21 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0 auto;
   margin-bottom: 25px;
+  max-width: 550px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 41px;
+    margin-left: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 82px;
+  }
 }
 
 .intro__slogan {
@@ -52,10 +105,42 @@
   line-height: 18px;
   text-transform: uppercase;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    margin-left: 87px;
+  }
 }
 
 .intro__button {
   font-size: 14px;
   line-height: 18px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 87px;
+    text-align: center;
+    position: relative;
+    top: -580px;
+    max-width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -480px;
+  }
+}
+
+.intro__picture img {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    top: -300px;
+    left: 10%;
+  }
 }

@@ -1,11 +1,33 @@
 .food-series {
   margin-bottom: 27px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 82px;
+    margin-bottom: 71px;
+  }
+}
+
+.food-series__wrapper {
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+    margin: 0 auto;
+  }
 }
 
 .food-series__list {
   .clear-list;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .food-series__list-item:not(:last-child) {
   margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    margin-right: 80px;
+  }
 }
