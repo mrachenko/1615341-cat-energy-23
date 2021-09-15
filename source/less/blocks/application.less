@@ -32,6 +32,7 @@
 
   @media (min-width: @tablet-width) {
     padding-right: 36px;
+    border-bottom: none;
   }
 }
 
@@ -53,7 +54,10 @@
   padding-left: 45px;
 
   @media (min-width: @tablet-width) {
-    border: 1px solid @lightgray;
+    padding: 25px 28px;
+    padding-left: 73px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -68,6 +72,10 @@
 .application__comment textarea {
   min-height: 150px;
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    min-height: 174px;
+  }
 }
 
 .application__extra {
@@ -85,6 +93,11 @@
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .application__legend {
@@ -96,6 +109,14 @@
   padding: 20px;
   max-width: 80%;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+
+    max-width: 90%;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 20px 40px;
+  }
 }
 
 .application__input-text,
@@ -104,5 +125,18 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+
+    margin-bottom: 32px;
+  }
+}
+
+.application__submit-block {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
