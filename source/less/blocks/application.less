@@ -61,6 +61,21 @@
 .application__comment,
 .application__extra {
   border: 0;
+  margin-top: 26px;
+  border-top: 2px solid @basic-green;
+}
+
+.application__comment textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+.application__extra {
+  margin-bottom: 34px;
+}
+
+.application__button {
+  margin-bottom: 21px;
 }
 
 .application__required {
@@ -69,12 +84,18 @@
   text-transform: initial;
   font-size: 14px;
   line-height: 16px;
+  text-align: center;
 }
 
 .application__legend {
+  display: inline-block;
   text-transform: initial;
   font-size: 24px;
   line-height: 26px;
+  margin-left: -20px;
+  padding: 20px;
+  max-width: 80%;
+  margin-bottom: 15px;
 }
 
 .application__input-text,
