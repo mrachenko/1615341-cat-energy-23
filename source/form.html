@@ -45,7 +45,7 @@
           <p class="intro__slogan intro__slogan--form">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         </section>
         <form class="application" action="https://echo.htmlacademy.ru" method="POST">
-          <fieldset class="application__user-info center-wrapper center-wrapper--form">
+          <fieldset class="application__user-info">
             <legend class="visually-hidden">
               Данные вашего питомца
             </legend>
@@ -63,11 +63,11 @@
             </label>
           </fieldset>
 
-          <fieldset class="application__target center-wrapper center-wrapper--form">
+          <fieldset class="application__target">
             <legend class="visually-hidden">
                 Ваша цель:
             </legend>
-            <div class="application__select">
+            <div class="application__radio">
               <label class="application__choice choice choice--radio choice--radio-active">
                 <input class="visually-hidden" type="radio" name="target" value="slim" checked>
                 Похудение
@@ -87,11 +87,11 @@
             <legend class="application__legend">
               Контактные данные (владельца кота)
             </legend>
-            <label class="application__input-text input-text input-text--email">
+            <label class="application__input-text application__input-text--email input-text input-text--email">
               E-mail:*
               <input class="input-text__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="application__input-text input-text input-text--tel">
+            <label class="application__input-text application__input-text--tel input-text input-text--tel">
               Телефон:*
               <input class="input-text__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
             </label>
@@ -108,7 +108,7 @@
             <legend class="application__legend">
               Дополнительно
             </legend>
-            <div class="application__select">
+            <div class="application__checkbox">
               <label class="application__choice choice choice--checkbox choice--checkbox-active">
                 <input class="visually-hidden" type="checkbox" name="extra" value="sweetener" checked>
                 Сахарозаменитель
@@ -132,7 +132,7 @@
             <p class="application__required">* — Обязательные поля</p>
           </div>
         </form>
-        <section class="contacts contacts--main">
+        <section class="contacts">
           <div class="contacts__text-wrapper center-wrapper">
             <h2 class="contacts__header">Приглашаем к сотрудничеству дилеров!</h2>
             <address class="contacts__address basic-text">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
