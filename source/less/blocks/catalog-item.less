@@ -12,6 +12,8 @@
     background: linear-gradient(to bottom, @basic-white 15%, @basic-gray 15%);
     display: flex;
     flex-direction: column;
+    padding: 39px 37px;
+    padding-top: 5px;
   }
 
   &--more {
@@ -34,7 +36,10 @@
     @media (min-width: @tablet-width) {
       background-size: 60px;
       background-position-y: 52px;
-      padding-top: 222px;
+      margin-top: 77px;
+      padding-top: 161px;
+      border: 2px solid @basic-gray;
+      height: initial;
 
       .catalog-item__header {
         max-width: 134px;
@@ -48,7 +53,7 @@
         line-height: 18px;
         max-width: 167px;
         text-align: center;
-        margin-bottom: 87px;
+        margin-bottom: 77px;
       }
     }
   }
@@ -76,6 +81,57 @@
     &:last-child {
       border-bottom: 1px solid @lightgray;
     }
+
+    @media (min-width: @tablet-width) {
+      border-top: 0;
+      height: initial;
+      background: @basic-white;
+      border: 1px solid @lightgray;
+      border-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 26px 38px;
+      align-items: center;
+
+      .catalog-item__header,
+      .catalog-item__parameters {
+        width: 35%;
+        margin: 0;
+        margin-bottom: 25px;
+        text-align: left;
+        justify-content: right;
+      }
+
+      .catalog-item__parameters p:not(:last-child) {
+        margin-right: 55px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      border: 0;
+      border-top: 1px solid @lightgray;
+      max-width: 896px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 15px 0;
+
+      .catalog-item__header,
+      .catalog-item__parameters,
+      .catalog-item__order {
+        width: 35%;
+        margin: 0;
+        text-align: left;
+        justify-content: right;
+      }
+
+      .catalog-item__parameters p:not(:last-child) {
+        margin-right: 55px;
+      }
+    }
   }
 }
 
@@ -95,7 +151,7 @@
   @media (min-width: @tablet-width) {
 
     order: -1;
-    height: 200px;
+    min-height: 200px;
     margin: 0;
     margin-bottom: 34px;
   }
@@ -170,6 +226,7 @@
     max-width: 150px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 21px;
   }
 }
 
@@ -182,4 +239,8 @@
 .catalog-item__order {
   grid-column-start: 1;
   grid-column-end: 3;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
 }

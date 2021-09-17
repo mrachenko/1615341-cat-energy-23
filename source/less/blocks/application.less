@@ -17,6 +17,19 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
   }
+
+  .application__wrapper {
+    @media (min-width: @desktop-width) {
+      max-width: @desktop-width;
+      margin: 0 auto;
+      width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+    }
+  }
 }
 
 .application__user-info,
@@ -42,7 +55,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 0 24px 110px;
+    padding: 0;
+    width: 100%;
   }
 }
 
@@ -57,7 +71,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px 28px 0;
+    padding: 0;
   }
 }
 
@@ -76,12 +90,19 @@
   }
 }
 
-.application__comment textarea {
-  min-height: 150px;
-  resize: none;
+.application__comment {
+  textarea {
+    min-height: 150px;
+    resize: none;
 
-  @media (min-width: @tablet-width) {
-    min-height: 174px;
+    @media (min-width: @tablet-width) {
+      min-height: 174px;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }
 
@@ -145,7 +166,7 @@
     &--tel,
     &--email {
       margin: 0;
-      width: 50%;
+      width: 100%;
       margin-right: 80px;
     }
   }
@@ -202,5 +223,8 @@
   @media (min-width: @desktop-width) {
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
+    max-width: @desktop-width;
+    margin: 0 auto;
+    padding-left: 50px;
   }
 }
