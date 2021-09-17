@@ -1,3 +1,38 @@
-.choice--radio {
+.choice {
+  padding: 6px 0;
+  position: relative;
   color: @special-dark-gray-2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &--radio {
+    &::before {
+      background: url("../../img/icons/radio-off.svg") no-repeat;
+    }
+  }
+
+  &--radio-active {
+    &::before {
+      background: url("../../img/icons/radio-on.svg") no-repeat;
+    }
+  }
+
+  &--checkbox {
+    &::before {
+      background: url("../../img/icons/checkbox-off.svg") no-repeat;
+    }
+  }
+
+  &--checkbox-active {
+    &::before {
+      background: url("../../img/icons/checkbox-on.svg") no-repeat;
+    }
+  }
 }

@@ -4,12 +4,62 @@
 }
 
 .catalog__main,
-.catalog__extra {
+.catalog__extra-list {
   .clear-list;
 }
 
+.catalog__extra-list {
+  margin-top: 42px;
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.catalog__main {
+  border-bottom: 1px solid @lightgray;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    border-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    max-width: @desktop-width;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .catalog__gift {
-  background: url("../img/gift-photo.jpg") center no-repeat;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  min-height: 290px;
+  background: url("../../img/icons/icon_gift.svg") top 30% left 50% no-repeat,
+    url("../../img/gift-photo.jpg") center no-repeat;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 69px;
+    margin-bottom: 76px;
+    background: url("../../img/icons/icon_gift.svg") top 50% left 18% no-repeat,
+      url("../../img/gift-photo-tablet.jpg") center no-repeat;
+    background-size: auto, 93%;
+    min-height: 200px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../../img/icons/icon_gift.svg") top 30% left 50% no-repeat,
+      url("../../img/gift-photo.jpg") center no-repeat;
+    background-size: auto, cover;
+    min-width: 245px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .catalog__gift-text {
@@ -17,4 +67,54 @@
   font-size: 16px;
   line-height: 20px;
   color: @basic-white;
+  font-family: @Arial;
+  padding-top: 187px;
+  width: 162px;
+  text-align: center;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    padding: 70px 0;
+    margin-right: 124px;
+    text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 185px;
+    text-align: center;
+  }
+}
+
+.catalog__extra {
+  margin-top: 40px;
+  border-top: 2px solid @basic-green;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.catalog__extra-title {
+  font-size: 24px;
+  line-height: 24px;
+  font-family: @Oswald;
+  font-weight: 400;
+  margin-top: -15px;
+  background-color: @basic-white;
+  width: min-content;
+  padding: 0 22px;
+  white-space: nowrap;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.catalog__extra-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr min-content;
+  }
 }

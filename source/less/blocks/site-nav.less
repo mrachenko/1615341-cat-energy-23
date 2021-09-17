@@ -23,7 +23,10 @@
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
-    color: @basic-white;
+
+    &--main {
+      color: @basic-white;
+    }
   }
 }
 
@@ -31,7 +34,9 @@
   @media (min-width: @tablet-width) {
     border-bottom: 2px solid @basic-green;
   }
+}
 
+.site-nav--main .site-nav__link--active {
   @media (min-width: @desktop-width) {
     border-color: @basic-white;
   }

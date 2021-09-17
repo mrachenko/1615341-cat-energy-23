@@ -1,52 +1,64 @@
 .intro {
   font-family: @Oswald;
-  text-align: center;
+  text-align: left;
   position: relative;
   padding-top: 27px;
   margin-bottom: 22px;
+  border-top: 1px solid @lightgray;
 
-  &::before {
-    content: "";
-    background-image: linear-gradient(
-      to bottom,
-      @green-opacity 0,
-      @green-opacity 63%,
-      @basic-white 63%,
-      @basic-white 100%
-      ),
-      url("../img/index-background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    border-top: none;
+  }
 
-    @media (min-width: @tablet-width) {
-      content: none;
-    }
-
-    @media (min-width: @desktop-width) {
-      content: "";
-      background-image: linear-gradient(
-      to bottom,
-      @green-opacity 0,
-      @green-opacity 63%,
-      @basic-white 63%,
-      @basic-white 100%
-      ),
-        url("../img/index-background-desktop.jpg");
-      background-size: contain;
-      min-height: 694px;
-      left: 50%;
-      top: -145px;
-    }
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
   }
 
   &--main {
     color: @basic-white;
+    text-align: center;
+    border-top: 0;
+
+    &::before {
+      content: "";
+      background-image: linear-gradient(
+        to bottom,
+        @green-opacity 0,
+        @green-opacity 63%,
+        @basic-white 63%,
+        @basic-white 100%
+        ),
+        url("../img/index-background.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+
+      @media (min-width: @tablet-width) {
+        content: none;
+      }
+
+      @media (min-width: @desktop-width) {
+        content: "";
+        background-image: linear-gradient(
+        to bottom,
+        @green-opacity 0,
+        @green-opacity 100%
+        ),
+          url("../img/index-background-desktop.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 694px;
+        width: 50%;
+        left: auto;
+        top: -145px;
+      }
+    }
 
     @media (min-width: @tablet-width) {
       color: @basic-black;
@@ -57,17 +69,14 @@
       margin-bottom: -350px;
     }
   }
-
-  @media (min-width: @tablet-width) {
-    text-align: left;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 0;
-  }
 }
 
 .intro__wrapper {
+  margin: 0 auto;
+  max-width: 1220px;
+}
+
+.intro__text-wrapper {
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
     margin: 0 auto;
@@ -97,6 +106,11 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 82px;
+    text-align: left;
+  }
+
+  &--form {
+    margin-left: 0;
   }
 }
 
@@ -111,8 +125,17 @@
     line-height: 20px;
     margin-bottom: 20px;
     margin-left: 87px;
+    text-align: left;
+
+    &--form {
+      line-height: 30px;
+      max-width: 323px;
+      margin-bottom: 66px;
+      margin-left: 0;
+    }
   }
 }
+
 
 .intro__button {
   font-size: 14px;
