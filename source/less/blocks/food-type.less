@@ -83,6 +83,7 @@
 
   @media (min-width: @desktop-width) {
     max-width: 470px;
+    max-height: 95px;
   }
 }
 
@@ -95,6 +96,43 @@
   line-height: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: calc(50% - 1px);
+    width: 18px;
+    height: 0;
+    border: 2px solid @basic-black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 138px;
+    top: calc(50% - 6px);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid @basic-black;
+  }
+
+  &:hover {
+    &::before {
+      width: 26px;
+    }
+
+    &::after {
+      left: 146px;
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

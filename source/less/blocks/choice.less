@@ -18,9 +18,21 @@
     }
   }
 
+  &--radio:hover {
+    &::before {
+      background-image: url("../../img/icons/radio-off-hover.svg");
+    }
+  }
+
   &--radio-active {
     &::before {
       background: url("../../img/icons/radio-on.svg") no-repeat;
+    }
+  }
+
+  &--radio-active:hover {
+    &::before {
+      background-image: url("../../img/icons/radio-on-hover.svg");
     }
   }
 
@@ -30,9 +42,25 @@
     }
   }
 
+  &--checkbox:hover {
+    &::before {
+      background-image: url("../../img/icons/checkbox-off-hover.svg");
+    }
+  }
+
   &--checkbox-active {
     &::before {
       background: url("../../img/icons/checkbox-on.svg") no-repeat;
     }
+  }
+
+  &--checkbox-active:hover {
+    &::before {
+      background-image: url("../../img/icons/checkbox-on-hover.svg");
+    }
+  }
+
+  & > input:disabled + span {
+    opacity: 30%;
   }
 }
