@@ -2,7 +2,7 @@
   .clear-list;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -57,12 +57,13 @@
   position: absolute;
   background-color: @background-gray;
   top: calc(100% - 0.7em);
-  white-space: nowrap;
+  max-width: 92px;
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
     font-size: 14px;
     line-height: 14px;
+    white-space: nowrap;
   }
 
   @media (min-width: @desktop-width) {

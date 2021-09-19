@@ -145,6 +145,10 @@
     line-height: 36px;
     padding: 20px 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: calc(50% - 650px);
+  }
 }
 
 .application__choice {
@@ -226,5 +230,13 @@
     max-width: @desktop-width;
     margin: 0 auto;
     padding-left: 50px;
+  }
+}
+
+.application__main-info {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }

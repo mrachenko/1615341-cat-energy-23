@@ -18,6 +18,14 @@
   @media (min-width: @desktop-width) {
     margin: 0 15px;
   }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:disabled {
+    opacity: 30%;
+  }
 }
 
 .main-nav--closed {
@@ -46,7 +54,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 12px;
       left: 0;
       width: 24px;
       border: 1.5px solid @basic-black;

@@ -1,7 +1,7 @@
 .input-text {
   color: @special-dark-gray;
   display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 13px;
 
@@ -39,5 +39,17 @@
     padding: 11px 17px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:hover {
+    border-color: @special-gray;
+  }
+
+  &:focus {
+    border-color: @special-dark-gray;
+  }
+
+  &:invalid {
+    border-color: @status-error;
   }
 }

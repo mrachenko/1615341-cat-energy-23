@@ -4,7 +4,7 @@
   padding: 18px;
   padding-bottom: 3px;
   background-repeat: no-repeat;
-  background-position: 16px 20px;
+  background-position: 22px 20px;
 
   &--slim {
     background-image: url("../../img/icons/cat_fit.svg");
@@ -22,6 +22,7 @@
 
   &--pro {
     background-image: url("../../img/icons/cat_strong.svg");
+    background-position: 13px 24px;
 
     @media (min-width: @tablet-width) {
       background-size: 30%;
@@ -83,6 +84,7 @@
 
   @media (min-width: @desktop-width) {
     max-width: 470px;
+    max-height: 95px;
   }
 }
 
@@ -93,8 +95,45 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 102px;
+    top: calc(50% - 1px);
+    width: 18px;
+    height: 0;
+    border: 2px solid @basic-black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: calc(50% - 5px);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 8px solid @basic-black;
+  }
+
+  &:hover {
+    &::before {
+      width: 26px;
+    }
+
+    &::after {
+      left: 146px;
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

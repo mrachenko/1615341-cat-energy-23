@@ -3,10 +3,22 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  max-width: 130px;
+  width: 165px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     min-width: 129px;
+  }
+}
+
+.social__link {
+  &:hover {
+    img {
+      filter: invert(68%) sepia(55%) saturate(555%) hue-rotate(52deg) brightness(85%) contrast(85%);
+    }
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }

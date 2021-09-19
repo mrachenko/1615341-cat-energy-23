@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="../source/img/favicon/152.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
     <link rel="stylesheet" href="css/style.css" type="text/css"/>
     <title>HTML Academy: Кэт энерджи</title>
@@ -47,8 +49,9 @@
           </div>
         </section>
         <form class="application" action="https://echo.htmlacademy.ru" method="POST">
-          <div class="application__center application__wrapper">
-            <fieldset class="application__user-info">
+          <div class="application__main-info center-wrapper">
+            <div class="application__wrapper">
+              <fieldset class="application__user-info">
             <legend class="visually-hidden">
               Данные вашего питомца
             </legend>
@@ -64,27 +67,28 @@
               <span>Возраст (лет):</span>
               <input class="input-text__input" type="text" name="middle-name" placeholder="7">
             </label>
-            </fieldset>
+              </fieldset>
 
-            <fieldset class="application__target">
+              <fieldset class="application__target">
             <legend class="visually-hidden">
                 Ваша цель:
             </legend>
             <div class="application__radio">
               <label class="application__choice choice choice--radio choice--radio-active">
                 <input class="visually-hidden" type="radio" name="target" value="slim" checked>
-                Похудение
+                <span>Похудение</span>
               </label>
               <label class="application__choice choice choice--radio">
                 <input class="visually-hidden" type="radio" name="target" value="gain">
-                Набор массы
+                <span>Набор массы</span>
               </label>
               <label class="application__choice choice choice--radio">
                 <input class="visually-hidden" type="radio" name="target" value="advice">
-                Не знаю (нужен ваш совет)
+                <span>Не знаю (нужен ваш совет)</span>
               </label>
             </div>
-            </fieldset>
+              </fieldset>
+            </div>
           </div>
           <fieldset class="application__user-contacts center-wrapper center-wrapper--form">
             <legend class="application__legend">
@@ -118,19 +122,19 @@
             <div class="application__checkbox">
               <label class="application__choice choice choice--checkbox choice--checkbox-active">
                 <input class="visually-hidden" type="checkbox" name="extra" value="sweetener" checked>
-                Сахарозаменитель
+                <span>Сахарозаменитель</span>
               </label>
               <label class="application__choice choice choice--checkbox">
                 <input class="visually-hidden" type="checkbox" name="extra" value="water">
-                Питьевая вода
+                <span>Питьевая вода</span>
               </label>
               <label class="application__choice choice choice--checkbox">
                 <input class="visually-hidden" type="checkbox" name="extra" value="milk">
-                Молоко
+                <span>Молоко</span>
               </label>
               <label class="application__choice choice choice--checkbox">
                 <input class="visually-hidden" type="checkbox" name="extra" value="vitamins">
-                Витамины
+                <span>Витамины</span>
               </label>
             </div>
           </fieldset>
