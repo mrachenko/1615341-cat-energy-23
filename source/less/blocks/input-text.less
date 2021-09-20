@@ -49,7 +49,7 @@
     border-color: @special-dark-gray;
   }
 
-  &:invalid {
+  &:invalid:not(:placeholder-shown) {
     border-color: @status-error;
   }
 }
