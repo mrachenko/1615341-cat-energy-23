@@ -13,6 +13,7 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 0;
+    margin-right: 40px;
   }
 }
 
@@ -41,28 +42,47 @@
   min-height: 290px;
   background: url("../../img/icons/icon_gift.svg") top 30% left 50% no-repeat,
     url("../../img/gift-photo.jpg") center no-repeat;
+  background-size: auto, contain;
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../../img/icons/icon_gift.svg") top 30% left 50% no-repeat,
+      url("../../img/gift-photo@2x.jpg") center no-repeat;
+    background-size: auto, contain;
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: 69px;
     margin-bottom: 76px;
     background: url("../../img/icons/icon_gift.svg") top 50% left 18% no-repeat,
       url("../../img/gift-photo-tablet.jpg") center no-repeat;
-    background-size: auto, 93%;
+    background-size: auto, contain;
     min-height: 200px;
     text-align: right;
     padding-left: 30px;
     padding-right: 30px;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../../img/icons/icon_gift.svg") top 50% left 18% no-repeat,
+        url("../../img/gift-photo-tablet@2x.jpg") center no-repeat;
+      background-size: auto, contain;
+    }
   }
 
   @media (min-width: @desktop-width) {
     background: url("../../img/icons/icon_gift.svg") top 30% left 50% no-repeat,
-      url("../../img/gift-photo.jpg") center no-repeat;
-    background-size: auto, cover;
+      url("../../img/gift-photo-desktop.jpg") center no-repeat;
+    background-size: auto, contain;
     min-width: 245px;
     margin: 0;
     padding: 0;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../../img/icons/icon_gift.svg") top 30% left 50% no-repeat,
+        url("../../img/gift-photo-desktop@2x.jpg") center no-repeat;
+      background-size: auto, contain;
+    }
   }
 }
 
@@ -119,6 +139,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 86px;
+    margin-left: calc(50% - 630px);
   }
 }
 
@@ -126,5 +147,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 3fr min-content;
+    max-width: 1220px;
+    margin: 0 auto;
   }
 }

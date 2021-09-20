@@ -6,7 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="../source/img/favicon/152.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.min.css" type="text/css"/>
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -151,10 +151,10 @@
             <address class="contacts__address basic-text">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
           </div>
           <div class="contacts__map-place">
-            <picture class="contacts__map">
+            <picture>
               <source media="(min-width: 1220px)" srcset="img/map-desktop.png">
               <source media="(min-width: 768px)" srcset="img/map-tablet.png">
-              <img src="img/map-mobile.png" alt="Адрес магазина - ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+              <img class="contacts__map" src="img/map-mobile.png" alt="Адрес магазина - ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
             </picture>
           </div>
         </section>
@@ -187,21 +187,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

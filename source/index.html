@@ -6,7 +6,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="../source/img/favicon/152.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/normalize.css" type="text/css"/>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.min.css" type="text/css"/>
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -46,10 +46,10 @@
           <div class="intro__text-wrapper">
             <h1 class="intro__header">Функциональное питание для котов</h1>
             <p class="intro__slogan">Занялся собой? Займись котом!</p>
-            <picture class="intro__picture">
-              <source media="(min-width: 1220px)" srcset="img/index-can.png">
-              <source media="(min-width: 768px)" srcset="img/index-can-tablet.png">
-              <img src="img/index-can-mobile.png" alt="Банка функционального питания">
+            <picture>
+              <source media="(min-width: 1220px)" srcset="img/index-can.png, img/index-can@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x">
+              <img class="intro__picture" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" alt="Банка функционального питания">
             </picture>
             <a class="intro__button button" href="form.html">Подобрать программу</a>
           </div>
@@ -112,15 +112,15 @@
             <div class="example__carousel">
               <ul class="example__photoplace">
                 <li>
-                  <picture class="example__photo example__photo--before">
-                    <source media="(min-width: 768px)" srcset="img/before-desktop.png">
-                    <img src="img/before-mobile.png" alt="Толстый кот">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/before-desktop.png, img/before-desktop@2x.png 2x">
+                    <img class="example__photo example__photo--before" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" alt="Толстый кот">
                   </picture>
                 </li>
                 <li>
-                  <picture class="example__photo example__photo--after example__photo--hidden">
-                    <source media="(min-width: 768px)" srcset="img/after-desktop.png">
-                    <img src="img/after-mobile.png" alt="Подтянутый кот">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/after-desktop.png, img/after-desktop@2x.png 2x">
+                    <img class="example__photo example__photo--after example__photo--hidden" src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" alt="Подтянутый кот">
                   </picture>
                 </li>
               </ul>
@@ -140,10 +140,10 @@
             <address class="contacts__address basic-text">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</address>
           </div>
           <div class="contacts__map-place">
-            <picture class="contacts__map">
+            <picture>
               <source media="(min-width: 1220px)" srcset="img/map-desktop.png">
               <source media="(min-width: 768px)" srcset="img/map-tablet.png">
-              <img src="img/map-mobile.png" alt="Адрес магазина - ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+              <img class="contacts__map" src="img/map-mobile.png" alt="Адрес магазина - ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
             </picture>
           </div>
         </section>
@@ -176,47 +176,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
-    <script>
-      var sliderToggle = document.querySelector('.slider__toggle');
-      var sliderScale = document.querySelector('.slider__scale');
-      var sliderFrom = document.querySelector('.slider__from');
-      var sliderTo = document.querySelector('.slider__to');
-      var photoFrom = document.querySelector('.example__photo--before');
-      var photoTo = document.querySelector('.example__photo--after');
-
-      function sliderClick() {
-        if (sliderToggle.classList.contains('slider__toggle--to')) {
-          sliderToggle.classList.remove('slider__toggle--to');
-          sliderToggle.classList.add('slider__toggle--from');
-          photoFrom.classList.remove('example__photo--hidden');
-          photoTo.classList.add('example__photo--hidden');
-        } else {
-          sliderToggle.classList.add('slider__toggle--to');
-          sliderToggle.classList.remove('slider__toggle--from');
-          photoFrom.classList.add('example__photo--hidden');
-          photoTo.classList.remove('example__photo--hidden');
-        }
-      }
-
-      sliderScale.addEventListener('click', sliderClick);
-      sliderFrom.addEventListener('click', sliderClick);
-      sliderTo.addEventListener('click', sliderClick);
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
