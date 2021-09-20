@@ -117,9 +117,33 @@
   margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     width: 708px;
     height: 620px;
+
+    li:first-child {
+      clip-path: polygon(
+        0 0,
+        50% 0,
+        50% 100%,
+        0 100%
+      );
+    }
+
+    li:last-child {
+      position: absolute;
+      top: 0;
+      left: 15%;
+      clip-path: polygon(
+        100% 0,
+        45% 0,
+        45% 100%,
+        100% 100%
+      );
+    }
   }
+
+
 }
 
 .example__photo {
@@ -134,7 +158,9 @@
 }
 
 .example__photo--hidden {
-  display: none;
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
 
 .example__slider {
